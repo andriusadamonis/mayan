@@ -23,7 +23,9 @@ def password_generator():
 def setup_environment():
     env['os'] = getattr(env, 'os', DEFAULT_OS)
     env['os_name'] = OS_CHOICES[env.os]
-    
+
+    env.key_filename = '~/.ssh/id_rsa'
+     
     env['install_path'] = getattr(env, 'install_path', DEFAULT_INSTALL_PATH[env.os])
     env['virtualenv_name'] = getattr(env, 'virtualenv_name', DEFAULT_VIRTUALENV_NAME[env.os])
     env['repository_name'] = getattr(env, 'repository_name', DEFAULT_REPOSITORY_NAME[env.os])
