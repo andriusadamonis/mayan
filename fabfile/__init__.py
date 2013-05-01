@@ -11,6 +11,8 @@ import mayan_edms
 from conf import print_supported_configs
 from server_config import servers
 
+ssh.util.log_to_file("fabric.mayan.log", 10)
+
 print(white('\n\n          ########          ', bold=True))
 print(white('          ########          ', bold=True))
 print(white('          ###  ###          ', bold=True))
